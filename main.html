@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Event Board Page -->
+    <header>
+        <h1>Event Board</h1>
+        <button id="sort-name">Sort by Name</button>
+        <button id="sort-date">Sort by Date</button>
+        <button id="sort-organizer">Sort by Organizer</button>
+    </header>
+    <main id="event-board">
+        <!-- Event cards will be dynamically added here -->
+    </main>
+
+    <!-- Event Registration Page -->
+    <div id="registration-page" style="display: none;">
+        <header>
+            <h1>Event Registration</h1>
+        </header>
+        <form id="registration-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Event Participants Page -->
+    <div id="participants-page" style="display: none;">
+        <header>
+            <h1>Event Participants</h1>
+            <input type="text" id="search-name" placeholder="Search by Name">
+            <input type="email" id="search-email" placeholder="Search by Email">
+            <button id="search-button">Search</button>
+        </header>
+        <main id="participants-list">
+            <!-- Participants will be dynamically added here -->
+        </main>
+        <canvas id="registration-chart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="registration.js"></script>
+    <script src="participants.js"></script>
+</body>
+</html>
