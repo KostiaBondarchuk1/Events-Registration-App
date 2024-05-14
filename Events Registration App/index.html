@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Event Board</h1>
+    </header>
+    <main>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'events')">Events</button>
+            <button class="tablinks" onclick="openTab(event, 'participants')">Participants</button>
+        </div>
+
+        <div id="events" class="tabcontent">
+            <div class="event-container">
+                <!-- JavaScript will populate event squares here -->
+            </div>
+        </div>
+
+        <div id="participants" class="tabcontent">
+            <!-- Content from participants.html -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Event Board App</p>
+    </footer>
+    <div id="registration-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeRegistrationModal()">&times;</span>
+            <h2>Register for Event</h2>
+            <form id="registration-form">
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="source">How did you hear about this event?</label>
+                    <input type="text" id="source" name="source">
+                </div>
+                <button type="submit" class="register-button">Register</button>
+            </form>
+        </div>
+    </div>
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeConfirmationModal()">&times;</span>
+            <h2>Registration Confirmation</h2>
+            <p>Thank you for registering!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

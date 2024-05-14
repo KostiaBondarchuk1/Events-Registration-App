@@ -1,0 +1,12 @@
+-- Створення бази даних SQLite
+CREATE DATABASE events_database;
+
+-- Підключення до бази даних
+.open events_database.db;
+
+-- Створення таблиці для подій
+CREATE TABLE events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    date TEXT
+);
